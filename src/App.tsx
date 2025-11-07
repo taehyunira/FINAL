@@ -1310,13 +1310,15 @@ function App() {
               </>
             )}
 
-            {!generatedContent && !isGenerating && brandProfile && (
+            {!generatedContent && !isGenerating && (
               <div className="text-center py-16">
                 <div className="w-20 h-20 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Sparkles className="w-10 h-10 text-gray-400" />
                 </div>
                 <p className="text-gray-500 text-lg">
-                  Enter your description to generate on-brand content with AI visual suggestions
+                  {brandProfile
+                    ? 'Enter your description to generate on-brand content with AI visual suggestions'
+                    : 'Setup your brand profile and start generating content'}
                 </p>
               </div>
             )}
